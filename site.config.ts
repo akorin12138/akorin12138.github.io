@@ -1,10 +1,10 @@
 import { defineSiteConfig } from 'valaxy'
 
 export default defineSiteConfig({
-  url: 'https://valaxy.site/',
+  url: 'https://akorin12138.github.io/',
   lang: 'zh-CN',
-  title: '只满足于眼前的『樱』',
-  subtitle: '',
+  title: 'riKa的小站',
+  subtitle: '只满足于眼前的『樱』',
 
   favicon: 'https://www.helloimg.com/i/2025/01/28/6797d27a549c8.png',
   author: {
