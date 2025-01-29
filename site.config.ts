@@ -3,22 +3,22 @@ import { defineSiteConfig } from 'valaxy'
 export default defineSiteConfig({
   url: 'https://akorin12138.github.io/',
   lang: 'zh-CN',
-  title: 'riKa的小站',
+  title: 'AkoRin的小站',
   subtitle: '只满足于眼前的『樱』',
 
   favicon: 'https://www.helloimg.com/i/2025/01/28/6797d27a549c8.png',
   author: {
-    name: 'riKa',
+    name: 'akorin',
     avatar: 'https://www.helloimg.com/i/2025/01/28/6797d27a549c8.png',
   },
   description: '随心记录',
   social: [
-    {
-      name: 'RSS',
-      link: '/atom.xml',
-      icon: 'i-ri-rss-line',
-      color: 'orange',
-    },
+    // {
+    //   name: 'RSS',
+    //   link: '/atom.xml',
+    //   icon: 'i-ri-rss-line',
+    //   color: 'orange',
+    // },
     // {
     //   name: 'QQ 群 1050458482',
     //   link: 'https://qm.qq.com/cgi-bin/qm/qr?k=kZJzggTTCf4SpvEQ8lXWoi5ZjhAx0ILZ&jump_from=webapi',
@@ -29,7 +29,7 @@ export default defineSiteConfig({
       name: 'GitHub',
       link: 'https://github.com/akorin12138',
       icon: 'i-ri-github-line',
-      color: '#ffffff',
+      color: '#A5A5E3',
     },
     // {
     //   name: '微博',
