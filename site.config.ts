@@ -1,7 +1,7 @@
 import { defineSiteConfig } from 'valaxy'
 
 export default defineSiteConfig({
-  url: 'https://akorin12138.github.io/',
+  url: 'http://akorin.icu',
   lang: 'zh-CN',
   title: 'AkoRin的小站',
   subtitle: '只满足于眼前的『樱』',
