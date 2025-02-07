@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://akorin.icu/</id>
+    <title>AkoRin的小站</title>
+    <updated>2025-02-07T15:11:27.098Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>akorin</name>
+        <email>i@valaxy.site</email>
+        <uri>https://valaxy.site</uri>
+    </author>
+    <link rel="alternate" href="http://akorin.icu/"/>
+    <link rel="self" href="http://akorin.icu/atom.xml"/>
+    <subtitle>随心记录</subtitle>
+    <logo>https://www.helloimg.com/i/2025/01/28/6797d27a549c8.png</logo>
+    <icon>http://akorin.icu/favicon.svg</icon>
+    <rights>CC BY-NC-SA 4.0 2025 © akorin</rights>
+    <entry>
+        <title type="html"><![CDATA[通信原理简记]]></title>
+        <id>http://akorin.icu/posts/通信原理</id>
+        <link href="http://akorin.icu/posts/通信原理"/>
+        <updated>2025-01-27T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h1>0.预备知识</h1>
+<h2>0.1 分贝的定义</h2>
+<p>$$<br>
+dB=\boldsymbol{10}\log_{10}x<br>
+$$<br>
+分贝公式中前面的10容易忘记。此外需要牢记“3dB公式”：<br>
+$$<br>
+\textcol</p>
+<br/><p>访问 <a href="http://akorin.icu/posts/通信原理" target="_blank">http://akorin.icu/posts/通信原理</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>akorin</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-02-07T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Japan计划！]]></title>
+        <id>http://akorin.icu/posts/JapanTravel</id>
+        <link href="http://akorin.icu/posts/JapanTravel"/>
+        <updated>2025-01-29T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h1>霓虹Plan</h1>
+<h2>行前准备</h2>
+<h3>必备证件</h3>
+<ul>
+<li>护照（直接拿身份证去办）</li>
+<li>签证（淘宝代办）</li>
+<li>身份证复印件</li>
+</ul>
+<h3>交通卡与通讯</h3>
+<ul>
+<li>SUICA/PASMO卡（覆盖关东关西）</li>
+<li></li>
+</ul>
+<br/><p>访问 <a href="http://akorin.icu/posts/JapanTravel" target="_blank">http://akorin.icu/posts/JapanTravel</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>akorin</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-01-30T00:00:00.000Z</published>
+    </entry>
+</feed>
