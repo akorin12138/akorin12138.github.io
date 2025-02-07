@@ -7,6 +7,7 @@ tags:
   - 计划
   - 日本
 top: 2
+cover: 'https://pub-3f9780acd0d54f9dabe63c0a1ab77225.r2.dev/pants.png'
 ---
 
 # 霓虹Plan
