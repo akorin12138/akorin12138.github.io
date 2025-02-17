@@ -4,12 +4,15 @@ export default defineSiteConfig({
   url: 'http://akorin.icu',
   lang: 'zh-CN',
   title: 'AkoRin的小站',
-  subtitle: '只满足于眼前的『樱』',
+  subtitle: '列车终将驶向终点 舞台呢 我们呢',
 
   favicon: 'https://www.helloimg.com/i/2025/01/28/6797d27a549c8.png',
   author: {
     name: 'akorin',
     avatar: 'https://www.helloimg.com/i/2025/01/28/6797d27a549c8.png',
+    status: {
+      emoji: '🌸',
+    }
   },
   description: '随心记录',
   social: [

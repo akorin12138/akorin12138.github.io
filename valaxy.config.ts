@@ -17,7 +17,10 @@ export default defineValaxyConfig<UserThemeConfig>({
   themeConfig: {
     banner: {
       enable: true,
-      title: '眼前的樱🌸',
+      title: '眼前的樱',
+      // cloud: {
+      //   enable:true
+      // }
     },
     bg_image: {
       enable: true,
