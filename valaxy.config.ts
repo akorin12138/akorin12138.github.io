@@ -21,8 +21,8 @@ export default defineValaxyConfig<UserThemeConfig>({
     },
     bg_image: {
       enable: true,
-      url: 'https://www.helloimg.com/i/2025/01/28/67980e5d6d0f4.jpg',
-      dark: 'https://www.helloimg.com/i/2025/01/28/67980c4378c89.jpg',
+      url: 'https://pub-3f9780acd0d54f9dabe63c0a1ab77225.r2.dev/20230520_025611.jpg',
+      dark: 'https://pub-3f9780acd0d54f9dabe63c0a1ab77225.r2.dev/20230520.jpg',
       opacity: 0.25,
     },
     pages: [
