@@ -4,7 +4,7 @@ export default defineSiteConfig({
   url: 'http://akorin.icu',
   lang: 'zh-CN',
   title: 'AkoRin的小站',
-  subtitle: '列车终将驶向终点 舞台呢 我们呢',
+  subtitle: '列车定会驶向下一站 那么舞台呢 我们呢',
 
   favicon: 'https://www.helloimg.com/i/2025/01/28/6797d27a549c8.png',
   author: {
