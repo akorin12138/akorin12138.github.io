@@ -1,7 +1,7 @@
 import { defineSiteConfig } from 'valaxy'
 
 export default defineSiteConfig({
-  url: 'http://akorin.icu',
+  url: 'https://akorin.icu',
   lang: 'zh-CN',
   title: 'AkoRin的小站',
   subtitle: '列车定会驶向下一站 那么舞台呢 我们呢',
@@ -97,11 +97,17 @@ export default defineSiteConfig({
   ],
 
   search: {
-    enable: false,
+    enable: true,
+    type:'fuse'
   },
-
+  comment: {
+    enable: true,
+  },
   sponsor: {
     enable: true,
     description: '谢谢你的喜欢',
+  },
+  statistics: {
+    enable: true,
   },
 })

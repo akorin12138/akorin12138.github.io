@@ -6,8 +6,9 @@ categories: 旅行计划
 tags:
   - 计划
   - 日本
-top: 2
+top: 3
 cover: 'https://pub-3f9780acd0d54f9dabe63c0a1ab77225.r2.dev/pants.png'
+end: true
 ---
 
 # 霓虹Plan

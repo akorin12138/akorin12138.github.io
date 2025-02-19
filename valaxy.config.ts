@@ -1,5 +1,6 @@
 import type { UserThemeConfig } from 'valaxy-theme-yun'
 import { defineValaxyConfig } from 'valaxy'
+import { addonWaline } from 'valaxy-addon-waline'
 
 // add icons what you will need
 const safelist = [
@@ -52,6 +53,16 @@ export default defineValaxyConfig<UserThemeConfig>({
     },
 
   },
-
+  addons: [
+      addonWaline({
+        // Waline 配置项，参考 https://waline.js.org/reference/client/props.html
+        serverURL: 'https://waline.akorin.icu',
+        meta: ['nick', 'mail'],
+        emoji: ['https://unpkg.com/@waline/emojis@1.1.0/tw-emoji'],
+        login: 'force',
+        texRenderer: true,
+        dark: 'auto',
+      }),
+    ],
   unocss: { safelist },
 })
