@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      mermaid:
+        specifier: ^11.4.1
+        version: 11.4.1
       valaxy:
         specifier: 0.22.7
         version: 0.22.7(@babel/parser@7.26.7)(@nuxt/kit@3.15.3(rollup@4.32.0))(@types/markdown-it@14.1.2)(@types/node@22.10.10)(@vue/compiler-dom@3.5.13)(axios@1.7.9)(eslint@9.19.0(jiti@2.4.2))(postcss@8.5.1)(rollup@4.32.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.7.3)(unhead@1.11.18)(yaml@2.7.0)
