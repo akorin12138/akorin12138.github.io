@@ -6,6 +6,8 @@ export default defineSiteConfig({
   title: 'AkoRin的小站',
   subtitle: '列车定会驶向下一站 那么舞台呢 我们呢',
 
+  mediumZoom: { enable: true },
+
   favicon: 'https://www.helloimg.com/i/2025/01/28/6797d27a549c8.png',
   author: {
     name: 'akorin',

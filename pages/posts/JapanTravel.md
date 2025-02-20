@@ -10,6 +10,10 @@ cover: 'https://pub-3f9780acd0d54f9dabe63c0a1ab77225.r2.dev/pants.png'
 end: true
 ---
 
+去霓虹准备的东西以及大致路线、要去圣地巡礼的地点。具体路线根据住宿的位置来决定
+
+<!-- more -->
+
 # 霓虹Plan
 
 ## 行前准备
