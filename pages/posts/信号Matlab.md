@@ -10,6 +10,7 @@ tags:
   - matlab
 top: 3
 cover: 'https://pic.akorin.icu/封面3.png'
+end: true
 ---
 
 记录基于Matlab的有关信号的编程
@@ -279,4 +280,274 @@ h是要绘制的离散数据；'.'表示一个字符串，指定绘制数据点�
 - h=impz(num,den); 计算和绘制离散时间系统的单位脉冲响应（冲激响应），分子包含常数项
 - [H,w]=freqz(num,den); 求频率响应，分子包含常数项，结果有幅值及对应的角频率
 
-# 求响应
+# 求响应（移植系统函数）
+### 连续函数
+
+已知
+
+$$
+H(s)=\frac{1}{s^3+2s^2+3s+1}
+$$
+
+画出零极点分布，并求单位冲激响应h(t)和频率冲激响应 $H(j\omega)$，并判断系统是否稳定
+
+```matlab
+num=[1];
+den=[1 2 3 1];
+sys=tf(num,den);
+poles=roots(den);
+
+figure(1);
+pzmap(sys);
+sgrid;
+title('Pole and Zero');
+t=0:0.02:10;
+h=impulse(num,den,t);
+
+figure(2);
+plot(t,h);
+title('impulse Respone');
+[H,w]=freqs(num,den);   
+
+figure(3);
+plot(w,abs(H));     %横坐标为角频率w，纵坐标为幅度H的绝对值
+title('Frequency Spectrum');
+```
+
+<div class="flex flex-col">
+
+<div class="flex grid-cols-2 justify-center">
+
+![](https://pic.akorin.icu/20250227152233684.png)
+
+![](https://pic.akorin.icu/20250227152306961.png)
+
+![](https://pic.akorin.icu/20250227152317892.png)
+
+</div>
+
+</div>
+
+```matlab
+plot(w,abs(H));     %横坐标为角频率w，纵坐标为幅度H的绝对值
+```
+必须要有绝对值才是求幅频响应
+
+### 离散函数
+
+$$
+H(j\omega)=\frac{1-j\omega}{1+j\omega} \quad f(t)=\sin(t)+\sin(3t)
+$$
+
+```matlab
+t=0:pi/100:4*pi
+b=[-1,1];
+a=[1,1];
+ft=sin(t)+sin(3*t);
+yt=lsim(b,a,ft,t);
+subplot(2,1,1);
+plot(t,ft);
+title('激励');
+subplot(2,1,2);
+plot(t,yt);
+title('响应');
+```
+![](https://pic.akorin.icu/20250227153908502.png)
+
+### 函数
+
+- impulse(num,den,t); 计算和绘制连续时间系统的单位脉冲响应，同时输入也可以最直接接入tf函数定义的传递函数impulse(tf(sys));
+- lsim(b,a,ft,t); 模拟和绘制线性时不变对任意输入信号响应
+
+# 根据状态方程求解函数响应
+### 连续系统
+
+$$
+\begin{bmatrix}
+  \dot{x}_1(t) \\
+  \dot{x}_2(t)
+\end{bmatrix}
+=
+\begin{bmatrix}
+  -2 & -2 \\
+  1 & 0
+\end{bmatrix}
+\begin{bmatrix}
+  {x}_1(t) \\
+  {x}_2(t)
+\end{bmatrix}
++\begin{bmatrix}
+  10 \\
+  0
+\end{bmatrix}f(t) 
+
+$$
+
+$$
+
+y(t)=\begin{bmatrix}
+  1 & 0
+\end{bmatrix}
+\begin{bmatrix}
+  {x}_1(t) \\
+  {x}_2(t)
+\end{bmatrix}
+$$
+
+其中系统输入为：
+
+$$
+f(t)=t\varepsilon(t)
+$$
+
+初始状态为：
+
+$$
+\begin{bmatrix}
+  {x}_1(0) \\
+  {x}_2(0)
+\end{bmatrix}
+=
+\begin{bmatrix}
+  5 \\
+  0
+\end{bmatrix}
+$$
+
+
+```matlab
+%%%% 求零输入响应 %%%%
+A=[-2 -2;1 0];
+B=[10;0];
+C=[1 0];
+D=[0];
+v0=[5;0];
+t=0:0.01:5;
+X=[0*ones(size(t))];          %输入
+[y,v]=lsim(A,B,C,D,X,t,v0);
+subplot(2,1,1);
+plot(t,y);
+grid;
+xlabel('t');
+ylabel('y');
+title('零输入响应')
+%%%% 求零状态响应 %%%%
+v0=[0;0];
+X=[1*t];                      %输入
+[y,v]=lsim(A,B,C,D,X,t,v0);
+subplot(2,1,2);
+plot(t,y);
+grid;
+xlabel('t');
+ylabel('y');
+title('零状态响应')
+```
+![](https://pic.akorin.icu/20250227160441605.png)
+
+### 离散系统
+
+$$
+\begin{bmatrix}
+  x_1(k+1) \\
+  x_2(k+1)
+\end{bmatrix}
+=
+\begin{bmatrix}
+  0 & 1 \\
+  -1 & 1.9021
+\end{bmatrix}
+\begin{bmatrix}
+  x_1(k) \\
+  x_2(k)
+\end{bmatrix}
++
+\begin{bmatrix}
+  1 \\
+  0
+\end{bmatrix}
+\begin{bmatrix}
+  f(k)
+\end{bmatrix}
+
+$$
+$$
+
+
+y(k)=
+\begin{bmatrix}
+  -1 & 1
+\end{bmatrix}
+
+\begin{bmatrix}
+  x_1(k) \\
+  x_2(k)
+\end{bmatrix}
+
+\quad
+
+\begin{bmatrix}
+  x_1(0) \\
+  x_2(0)
+\end{bmatrix}
+=
+\begin{bmatrix}
+  -10  \\
+  -4
+\end{bmatrix}
+$$
+
+```matlab
+A=[0 1;-1 1.9021];
+B=[1;0];
+C=[-1 1];
+D=[0];
+k=0:1:40;
+v0=[-10;-4];
+X=[1*ones(size(k))];
+[y,v]=dlsim(A,B,C,D,X,v0);
+stem(k,y);
+xlabel('k');
+ylabel('y');
+title('全响应')
+```
+![](https://pic.akorin.icu/20250227161354348.png)
+
+# 实现Sa信号的采样和恢复
+
+:::tip Sa信号恢复
+
+$$
+f(t)=\sum\limits_{n=-\infty}^{\infty}f(nT_s)Sa[\frac{\omega_s}{2}(t-nT_s)]
+$$
+
+:::
+
+e.g 信号sa(t)作为被采样信号，信号带宽B=1，采样频率 $\omega_s=2B$ ，此频率下的采样为Nyquist采样，对采样及恢复过程用Matlab进行仿真
+
+```matlab
+B=1;
+wc=B;
+Ts=pi/B;
+ws=2*pi/Ts;
+N=100;
+n=-N:N;
+nTs=n.*Ts;
+fs=sinc(nTs/pi);
+Dt=0.005;
+t=-15:Dt:15;
+t1=-15:0.2:15;
+%%%% 信号重构 %%%%
+fa=fs*Ts*wc/pi*sinc((wc/pi)*(ones(length(nTs),1)*t-nTs'*ones(1,length(t))));
+error=abs(fa-sinc(t/pi));
+subplot(3,1,1);stem(t1,sinc(t1/pi),'.');
+title('Sa函数采样点')
+subplot(3,1,2);plot(t,fa);
+title('恢复信号')
+subplot(3,1,3);plot(t,error);
+title('恢复信号与原信号之间的差值');
+```
+![](https://pic.akorin.icu/20250227165732978.png)
+
+### 函数
+
+- fs=sinc(nTs/pi); 即Sa函数
