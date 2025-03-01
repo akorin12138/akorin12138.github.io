@@ -558,3 +558,6 @@ $$
 $$
 sinc(x)=\frac{\sin(\pi x)}{\pi x}
 $$
+
+
+
