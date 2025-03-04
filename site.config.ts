@@ -18,12 +18,12 @@ export default defineSiteConfig({
   },
   description: '随心记录',
   social: [
-    // {
-    //   name: 'RSS',
-    //   link: '/atom.xml',
-    //   icon: 'i-ri-rss-line',
-    //   color: 'orange',
-    // },
+    {
+      name: 'RSS',
+      link: '/atom.xml',
+      icon: 'i-ri-rss-line',
+      color: 'orange',
+    },
     // {
     //   name: 'QQ 群 1050458482',
     //   link: 'https://qm.qq.com/cgi-bin/qm/qr?k=kZJzggTTCf4SpvEQ8lXWoi5ZjhAx0ILZ&jump_from=webapi',
