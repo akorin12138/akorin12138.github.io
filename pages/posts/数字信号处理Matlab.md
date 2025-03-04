@@ -1,15 +1,15 @@
 ---
 title: 数字信号处理Matlab编程
 date: 2025-03-03
-updated: 2025-03-03
+updated: 2025-03-04
 categories: 笔记
 tags:
   - 笔记
   - 数字信号处理
   - matlab
-top: 3
+top: 4
 cover: 'https://pic.akorin.icu/封面4.png'
-end: true
+end: false
 ---
 
 记录数字信号处理有关的Matlab代码
@@ -261,6 +261,15 @@ $$
 三角窗
 
 #### `blackman`
+
+布莱克曼窗
+
+#### `hanning`
+
+汉宁窗
+
+#### `fir1`
+
 
 
 #### `mod`
