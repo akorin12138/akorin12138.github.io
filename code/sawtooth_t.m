@@ -1,15 +1,18 @@
-% Éú³É¾â³Ý²¨ºÍÈý½Ç²¨
+% ç”Ÿæˆé”¯é½¿æ³¢å’Œä¸‰è§’æ³¢
 
-T=1; % ÖÜÆÚ]
-Fs=100; % ²ÉÑùÆµÂÊ
-f=1/T; % ÆµÂÊ
+clc;clear;close all
 
-dt=0:T/Fs:T*2; % Ê±¼äÐòÁÐ
+T=1; % å‘¨æœŸ]
+Fs=100; % é‡‡æ ·é¢‘çŽ‡
+f=1/T; % é¢‘çŽ‡
+
+dt=0:T/Fs:T*2; % æ—¶é—´åºåˆ—
+
 
 x1=sawtooth(2*pi*f*dt);
 x2=sawtooth(2*pi*f*dt,0.5);
 plot(dt,x1);
-title('¾â³Ý²¨');
+title('é”¯é½¿æ³¢');
 figure;
 plot(dt,x2);
-title('Èý½Ç²¨');
+title('ä¸‰è§’æ³¢');
