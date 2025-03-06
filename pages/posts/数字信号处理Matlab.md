@@ -403,6 +403,7 @@ z域的部分分式展开（部分分式分解）
 
 <<< @/code/iir_bp.m{matlab}[iir带通设计]
 <<< @/code/fir_bs.m{matlab}[fir带阻设计]
+<<< @/code/bs.m{matlab}[fir、iir带阻设计]
 
 :::
 
