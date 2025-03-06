@@ -550,11 +550,11 @@ title('恢复信号与原信号之间的差值');
 ### 函数
 
 - `fs=sinc(nTs/pi);` 即辛格函数，sinc函数与Sa函数的数学表达形式相同，有时会区分归一化sinc函数和非归一化sinc函数，而在matlab中`sinc`是归一化sinc函数
-- - 非归一化sinc函数
+  - 非归一化sinc函数
 $$
 sinc(x)=\frac{\sin(x)}{x}
 $$
-- - 归一化sinc函数
+  - 归一化sinc函数
 $$
 sinc(x)=\frac{\sin(\pi x)}{\pi x}
 $$
