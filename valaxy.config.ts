@@ -15,6 +15,13 @@ export default defineValaxyConfig<UserThemeConfig>({
 
   theme: 'yun',
 
+  modules: {
+      rss: {
+        enable: true,
+        fullText: false,
+      },
+    },
+
   themeConfig: {
     banner: {
       enable: true,
