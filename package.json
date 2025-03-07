@@ -16,7 +16,7 @@
     "valaxy": "0.22.13",
     "valaxy-addon-components": "^0.1.0",
     "valaxy-addon-waline": "^0.2.0",
-    "valaxy-theme-yun": "0.22.7"
+    "valaxy-theme-yun": "0.22.13"
   },
   "devDependencies": {
     "@iconify-json/hugeicons": "^1.2.3",
