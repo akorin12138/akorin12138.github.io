@@ -527,28 +527,40 @@ $$
 e.g 信号sa(t)作为被采样信号，信号带宽B=1，即信号的最大角频率为1，采样频率 $\omega_s=2B$ ，此频率下的采样为Nyquist采样，对采样及恢复过程用Matlab进行仿真
 
 ```matlab
-B=1;
-wc=B;
-Ts=pi/B;
-ws=2*pi/Ts;
-N=100;
+ws=2;wm=1;
+Ts=2*pi/ws;
+N=50;
 n=-N:N;
 nTs=n.*Ts;
-fs=sinc(nTs/pi);
-Dt=0.005;
-t=-15:Dt:15;
-t1=-15:0.2:15;
+fs=pi*sinc(wm*nTs/pi);
+t=-6*pi:0.001:6*pi;
 %%%% 信号重构 %%%%
-fa=fs*Ts*wc/pi*sinc((wc/pi)*(ones(length(nTs),1)*t-nTs'*ones(1,length(t))));
-error=abs(fa-sinc(t/pi));
-subplot(3,1,1);stem(t1,sinc(t1/pi),'.');
-title('Sa函数采样点')
-subplot(3,1,2);plot(t,fa);
+f=fs*1/pi*pi*sinc(1/pi*(ones(length(nTs),1)*t-nTs'*ones(1,length(t))));
+error=abs(f-pi*sinc(t/pi));
+subplot(3,1,1);plot(t,pi*sinc(t/pi));
+title('Sa函数原始信号')
+subplot(3,1,2);plot(t,f);
 title('恢复信号')
 subplot(3,1,3);plot(t,error);
 title('恢复信号与原信号之间的差值');
 ```
-![](https://pic.akorin.icu/20250227165732978.png)
+![](https://pic.akorin.icu/20250308212833536.png)
+
+```matlab
+f=fs*1/pi*pi*sinc(1/pi*(ones(length(nTs),1)*t-nTs'*ones(1,length(t))));
+```
+在这段代码中利用矩阵的性质，实现求和
+
+```matlab
+ones(length(nTs),1)*t
+```
+这段是nx1的矩阵乘上1xm的矩阵得到nxm的矩阵，此时这个矩阵上的点都是t的点，每一列上对应不同的时间点
+```matlab
+nTs'*ones(1,length(t))
+```
+nTs的转置再乘上ones函数，将nTs矩阵扩展成nxm，此时上面的矩阵都是nTs的点，每一行对应不同的nTs的时间点
+
+两式相减后，每一列就是在单个时间t的点上t-nTs的集合，前面的fs的点数和nTs相同，fs再和后面得到的sinc的矩阵就能得到每个时间t点对应的sinc(t-nTs)的和
 
 ### 函数
 
