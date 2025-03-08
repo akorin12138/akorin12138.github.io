@@ -1,7 +1,7 @@
 ---
 title: 信号的Matlab编程
 date: 2025-02-25
-updated: 2025-02-28
+updated: 2025-03-08
 categories: 笔记
 tags:
   - 笔记
@@ -519,12 +519,12 @@ title('全响应')
 :::tip Sa信号恢复
 
 $$
-f(t)=\sum\limits_{n=-\infty}^{\infty}f(nT_s)Sa[\frac{\omega_s}{2}(t-nT_s)]
+f(t)=\frac{\omega_m}{2\pi}\sum\limits_{n=-\infty}^{\infty}f(nT_s)Sa[\frac{\omega_m}{2}(t-nT_s)]
 $$
 
 :::
 
-e.g 信号sa(t)作为被采样信号，信号带宽B=1，采样频率 $\omega_s=2B$ ，此频率下的采样为Nyquist采样，对采样及恢复过程用Matlab进行仿真
+e.g 信号sa(t)作为被采样信号，信号带宽B=1，即信号的最大角频率为1，采样频率 $\omega_s=2B$ ，此频率下的采样为Nyquist采样，对采样及恢复过程用Matlab进行仿真
 
 ```matlab
 B=1;
