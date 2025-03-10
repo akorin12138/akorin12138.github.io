@@ -9,6 +9,7 @@ tags:
   - 速通
   - matlab
 top: 3
+codeHeightLimit: 300
 cover: 'https://pic.akorin.icu/封面3.png'
 end: true
 ---
@@ -525,9 +526,10 @@ title('全响应')
 :::tip Sa信号恢复
 
 $$
-f(t)=\frac{\omega_m}{2\pi}\sum\limits_{n=-\infty}^{\infty}f(nT_s)Sa[\frac{\omega_m}{2}(t-nT_s)]
+f(t)=T_s\frac{\omega_c}{pi}\sum\limits_{n=-\infty}^{\infty}f(nT_s)Sa[\frac{\omega_c}{2}(t-nT_s)]
 $$
 
+其中 $T_s$ 是采样周期， $\omega_c$ 是低通滤波器的截止频率，一般取信号的最大频率
 :::
 
 e.g 信号sa(t)作为被采样信号，信号带宽B=1，即信号的最大角频率为1，采样频率 $\omega_s=2B$ ，此频率下的采样为Nyquist采样，对采样及恢复过程用Matlab进行仿真
@@ -580,5 +582,99 @@ $$
 sinc(x)=\frac{\sin(\pi x)}{\pi x}
 $$
 
+## 对任意信号的采样频谱分析及恢复
+
+$$
+f(t)=\sin(2\pi f_0 t)+ \frac{1}{3} \sin(6\pi f_0 t)
+$$
+
+求该信号的频谱并在采样信号 
+
+$$
+Fs>2f_m,F_s=2f_m,Fs<2f_m
+$$
+
+的情况下绘制采样波形以及对采样后的信号进行恢复。其中 $f_0=1Hz$，取最高有限带宽频率 $f_m=5f_0$
+
+```matlab
+clc;clear;close all;
+
+% 信号常量
+f0=1;
+fm=5*f0;
+Fs1=5*fm;Fs2=2*fm;Fs3=1*fm;
+tl=-2;th=2;
+t=tl:0.001:th;
+nTs1=tl:1/Fs1:th;
+nTs2=tl:1/Fs2:th;
+nTs3=tl:1/Fs3:th;
+
+% 原始信号和采样信号
+
+f=sin(2*pi*f0*t)+(1/3)*sin(6*pi*f0*t);
+
+fs1=sin(2*pi*f0*nTs1)+1/3.*sin(6*pi*f0*nTs1);
+fs2=sin(2*pi*f0*nTs2)+1/3.*sin(6*pi*f0*nTs2);
+fs3=sin(2*pi*f0*nTs3)+1/3.*sin(6*pi*f0*nTs3);
+
+figure;
+subplot(4,1,1);
+plot(t,f);
+title('原信号');
+
+subplot(4, 1, 2);
+stem(nTs1,fs1,'.');
+subplot(4, 1, 3);
+stem(nTs2,fs2,'.');
+subplot(4, 1, 4);
+stem(nTs3,fs3,'.');
+
+% fft求各采样信号的频谱
+
+x1=fftshift(fft(fs1));f1=linspace(-Fs1/2,Fs1/2,length(x1));
+x2=fftshift(fft(fs2));f2=linspace(-Fs2/2,Fs2/2,length(x2));
+x3=fftshift(fft(fs3));f3=linspace(-Fs3/2,Fs3/2,length(x3));
+
+% 绘图
+
+figure;
+subplot(3, 1, 1);
+stem(f1,2.*abs(x1)/length(x1),'.');
+xlabel('f/Hz');ylabel('幅值');
+
+subplot(3, 1, 2);
+stem(f2,2.*abs(x2)/length(x2),'.');
+xlabel('f/Hz');ylabel('幅值');
+
+subplot(3, 1, 3);
+stem(f3,2.*abs(x3)/length(x3),'.');
+xlabel('f/Hz');ylabel('幅值');
+
+% 重建信号并求绘图
+
+F1=fs1*1/Fs1*2*pi*fm/pi*sinc(1/pi*2*pi*fm*(ones(length(nTs1),1)*t-nTs1'*ones(1,length(t))));
+figure;
+subplot(311);
+plot(t, F1,'r',t,f,'b');
+
+F2=fs2*1/Fs2*2*pi*fm/pi*sinc(1/pi*2*pi*fm*(ones(length(nTs2),1)*t-nTs2'*ones(1,length(t))));
+subplot(312);
+plot(t, F2,'r',t,f,'b');
+
+F3=fs3*1/Fs3*2*pi*fm/pi*sinc(1/pi*2*pi*fm*(ones(length(nTs3),1)*t-nTs3'*ones(1,length(t))));
+subplot(313);
+plot(t, F3,'r',t,f,'b');
+```
 
 
+<div class="flex flex-col">
+<div class="flex grid-cols-2 justify-center items-center">
+
+![](https://pic.akorin.icu/20250310170814974.png)
+
+![](https://pic.akorin.icu/20250310170821224.png)
+
+![](https://pic.akorin.icu/20250310170845805.png)
+
+</div>
+</div>
