@@ -8,10 +8,10 @@ export default defineSiteConfig({
 
   mediumZoom: { enable: true },
 
-  favicon: 'https://www.helloimg.com/i/2025/01/28/6797d27a549c8.png',
+  favicon: 'https://pic.akorin.icu/icon.png',
   author: {
     name: 'akorin',
-    avatar: 'https://www.helloimg.com/i/2025/01/28/6797d27a549c8.png',
+    avatar: 'https://pic.akorin.icu/20250311170937268.png',
     status: {
       emoji: '🌸',
     }

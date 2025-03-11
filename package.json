@@ -13,11 +13,12 @@
   },
   "dependencies": {
     "mermaid": "^11.4.1",
-    "valaxy": "0.22.6",
+    "valaxy": "0.22.14",
     "valaxy-addon-algolia": "^0.1.0",
     "valaxy-addon-components": "^0.1.0",
     "valaxy-addon-waline": "^0.2.0",
-    "valaxy-theme-yun": "0.22.6"
+    "valaxy-theme-yun": "0.22.14",
+    "vite-plugin-vue-layouts": "^0.11.0"
   },
   "devDependencies": {
     "@iconify-json/hugeicons": "^1.2.3",
