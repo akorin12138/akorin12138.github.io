@@ -112,4 +112,11 @@ export default defineSiteConfig({
   statistics: {
     enable: true,
   },
+  encrypt: {
+    // 开启加密，默认关闭
+    enable: true
+    // algorithm
+    // iv
+    // salt
+  },
 })

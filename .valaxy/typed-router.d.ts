@@ -31,6 +31,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/数字信号处理': RouteRecordInfo<'/posts/数字信号处理', '/posts/数字信号处理', Record<never, never>, Record<never, never>>,
     '/posts/数字信号处理Matlab': RouteRecordInfo<'/posts/数字信号处理Matlab', '/posts/数字信号处理Matlab', Record<never, never>, Record<never, never>>,
     '/posts/通信原理': RouteRecordInfo<'/posts/通信原理', '/posts/通信原理', Record<never, never>, Record<never, never>>,
+    '/posts/武理往年复试问答': RouteRecordInfo<'/posts/武理往年复试问答', '/posts/武理往年复试问答', Record<never, never>, Record<never, never>>,
     '/posts/信号Matlab': RouteRecordInfo<'/posts/信号Matlab', '/posts/信号Matlab', Record<never, never>, Record<never, never>>,
     '/posts/JapanTravel': RouteRecordInfo<'/posts/JapanTravel', '/posts/JapanTravel', Record<never, never>, Record<never, never>>,
     '/posts/zenbrowser': RouteRecordInfo<'/posts/zenbrowser', '/posts/zenbrowser', Record<never, never>, Record<never, never>>,
