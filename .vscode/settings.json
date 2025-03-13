@@ -10,7 +10,14 @@
   },
   "editor.formatOnSave": false,
   "files.associations": {
-    "*.css": "postcss"
+    "*.sqlbook": "sql",
+    "*.ndjson": "jsonl",
+    "*.dbclient-js": "javascript",
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "*.m": "matlab",
+    "*.css": "postcss",
   },
   "svg.preview.background": "editor",
   "sarif-viewer.connectToGithubCodeScanning": "off"
