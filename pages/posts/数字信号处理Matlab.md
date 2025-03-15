@@ -352,9 +352,9 @@ $$
 
 :::code-group
 
-<<< @/code/iir_bp.m{matlab}[iir带通设计]
-<<< @/code/fir_bs.m{matlab}[fir带阻设计]
-<<< @/code/bs.m{matlab}[fir、iir带阻设计]
+<<< @/code/matlab/digitalSignalProcessing/iir_bp.m{matlab}[iir带通设计]
+<<< @/code/matlab/digitalSignalProcessing/fir_bs.m{matlab}[fir带阻设计]
+<<< @/code/matlab/digitalSignalProcessing/bs.m{matlab}[fir、iir带阻设计]
 
 :::
 
@@ -461,9 +461,9 @@ $$
 
 :::code-group
 
-<<< @/code/impulse_t.m{matlab}[阶跃响应]
-<<< @/code/square_duty.m{matlab}[方波设计]
-<<< @/code/sawtooth_t.m{matlab}[锯齿波/三角波设计]
+<<< @/code/matlab/digitalSignalProcessing/impulse_t.m{matlab}[阶跃响应]
+<<< @/code/matlab/digitalSignalProcessing/square_duty.m{matlab}[方波设计]
+<<< @/code/matlab/digitalSignalProcessing/sawtooth_t.m{matlab}[锯齿波/三角波设计]
 
 :::
 
@@ -588,8 +588,8 @@ $$
 :::details 完整代码
 :::code-group
 
-<<< @/code/impulse_step.m{matlab}[连续系统]
-<<< @/code/impz_dlsim.m{matlab}[离散系统]
+<<< @/code/matlab/digitalSignalProcessing/impulse_step.m{matlab}[连续系统]
+<<< @/code/matlab/digitalSignalProcessing/impz_dlsim.m{matlab}[离散系统]
 
 
 
@@ -666,7 +666,7 @@ $$
 H(s)=\frac{s^4-2s^3+30s^2+14s+5}{5s^4+4s^3+4s^2-2s-1}
 $$
 
-<<< @/code/res_sos.m{matlab}[转换]
+<<< @/code/matlab/digitalSignalProcessing/res_sos.m{matlab}[转换]
 
 
 <div class="flex flex-col">
@@ -699,7 +699,7 @@ $$
 
 :::details 完整代码
 
-<<< @/code/fuliye.m{matlab}[傅里叶变化]
+<<< @/code/matlab/digitalSignalProcessing/fuliye.m{matlab}[傅里叶变化]
 
 :::
 
