@@ -1,0 +1,1 @@
+import"./chunks/@vueuse/motion.CsNOvAJC.js";import{a as t}from"./app.De-5h46O.js";import{A as e}from"./framework.BtwoJBqO.js";function l(o){if(!o)return{color:"",icon:"",styles:void 0};const r=t();o in r.value.types||(o="link");const s=r.value.types[o].color,i=r.value.types[o].icon,n=e(()=>o?{"--card-c-primary":s}:void 0);return{color:s,icon:i,styles:n}}export{l as u};
