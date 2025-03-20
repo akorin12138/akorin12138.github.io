@@ -526,7 +526,7 @@ title('全响应')
 :::tip Sa信号恢复
 
 $$
-f(t)=T_s\frac{\omega_c}{pi}\sum\limits_{n=-\infty}^{\infty}f(nT_s)Sa[\frac{\omega_c}{2}(t-nT_s)]
+f(t)=T_s\frac{\omega_c}{\pi}\sum\limits_{n=-\infty}^{\infty}f(nT_s)Sa[\omega_c(t-nT_s)]
 $$
 
 其中 $T_s$ 是采样周期， $\omega_c$ 是低通滤波器的截止频率，一般取信号的最大频率
