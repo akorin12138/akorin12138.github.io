@@ -10,7 +10,8 @@ x=sin(2*pi/N*k2);    % 生成输入信号
 
 % 计算冲激响应
 
-[h0,k0]=impz(b,a);
+h0=dimpulse(b,a);
+k0=0:length(h0)-1;
 
 % 计算阶跃响应
 
@@ -19,18 +20,20 @@ h1=dstep(b,a);
 % 计算全响应
 
 h2=dlsim(b,a,x);
-
 k1=0:length(h1)-1;
 
+% 使用impz绘制滤波器系统函数的冲激响应
+figure;
+impz(b,a);
 
 % 画图
 figure;
 subplot(3,1,1);
-stem(k0,h0);
+stem(k0,h0,'.');
 title('单位冲激响应');
 subplot(3,1,2);
-stem(k1,h1);
+stem(k1,h1,'.');
 title('单位阶跃响应');
 subplot(3,1,3);
-stem(k2,h2);
+stem(k2,h2,'.');
 title('全响应');
