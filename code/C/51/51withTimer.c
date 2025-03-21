@@ -14,3 +14,23 @@ void Timer0Init()
     TR0 = 1;
     EA = 1;
 }
+
+// 外部中断0
+void EX0Init()
+{
+    // 中断允许寄存器IE
+    EX0 = 1; // 开启0号外部中断
+    // 控制寄存器TCON
+    IT0 = 1; // 设置外部中断触发方式.  // 0-低电平触发  // 1-负跳变触发
+    EA = 1;  // 开启总中断
+}
+
+void EX0Interrupt() interrupt 0
+{
+}
+void timer0Interrupt() interrupt 1
+{
+    TF0 = 0;
+    TL0 = (65536 - 922) * 256;
+    TH0 = (65536 - 922) / 256;
+}
