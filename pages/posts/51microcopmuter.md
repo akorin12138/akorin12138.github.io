@@ -63,9 +63,11 @@ $$
 ```mermaid
 
 flowchart TD
+
   设定ISP等待时间 --> 设定ISP模式 --> 设定ISP操作地址 --> 关闭全局定时器 --> ISP_TRIG寄存器存入0x46 --> ISP_TRIG寄存器存入0xB9 --> 等待一个空闲周期 --> 退出ISP模式
 
 ```
+
   - 关闭全局定时器是为了确保连续往ISP_TRIG寄存器存入0x46和0xB9，才能使命令生效
   - 推出ISP模式就是把寄存器ISP_CONTR、ISP_CMD、ISP_TRIG清空
 
