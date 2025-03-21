@@ -8,7 +8,6 @@ tags:
   - 51单片机
   - C
 top: 5
-codeHeightLimit: 350
 cover: 'https://pic.akorin.icu/20250315185018179.png'
 end: false
 ---
@@ -34,10 +33,14 @@ end: false
   - 串口中断
 
 > **计算定时时间公式**
+
 $$
 (2^{16}-X)\times \frac{12}{f_n}=Time
 $$
+
 > 其中X为定时器初始计数值（填装进Tlx，Thx寄存器）， $\f_n$ 为晶振频率
+
+:::details 完整代码
 
 :::code-group
 <<< @/code/C/51/51withTimer.c{c}[51单片机定时器及外部中断设计]
@@ -78,6 +81,8 @@ stateDiagram
 
   - 关闭全局定时器是为了确保连续往ISP_TRIG寄存器存入0x46和0xB9，才能使命令生效
   - 推出ISP模式就是把寄存器ISP_CONTR、ISP_CMD、ISP_TRIG清空
+
+:::details 完整代码
 
 :::code-group
 <<< @/code/C/51/interFLASH.c{c}[内部FLASH读取设计]
