@@ -1,13 +1,14 @@
 ---
 title: 51单片机编程
 date: 2025-03-15
-updated: 2025-03-15
+updated: 2025-03-21
 categories: 笔记
 tags:
   - 笔记
   - 51单片机
   - C
 top: 5
+codeHeightLimit: 350
 cover: 'https://pic.akorin.icu/20250315185018179.png'
 end: false
 ---
@@ -38,9 +39,8 @@ $$
 (2^{16}-X)\times \frac{12}{f_n}=Time
 $$
 
-> 其中X为定时器初始计数值（填装进Tlx，Thx寄存器）， $\f_n$ 为晶振频率
+> 其中X为定时器初始计数值（填装进Tlx，Thx寄存器）， $f_n$ 为晶振频率
 
-:::details 完整代码
 
 :::code-group
 <<< @/code/C/51/51withTimer.c{c}[51单片机定时器及外部中断设计]
@@ -48,7 +48,7 @@ $$
 
 ## 写内部FLASH
 
-- STC89C52/AT89C52内部FLASH扇区地址：
+STC89C52/AT89C52内部FLASH扇区地址：
 
 | 第一扇区    | 第二扇区    | 第三扇区    | 第四扇区    |
 | ----------- | ----------- | ----------- | ----------- |
@@ -65,12 +65,25 @@ $$
   - 0x03: 擦除
 - 操作流程：
 
+<center>
 
+```mermaid
+
+stateDiagram
+
+  设定ISP等待时间 --> 设定ISP模式 
+  设定ISP模式 --> 设定ISP操作地址 
+  设定ISP操作地址 --> 关闭全局定时器 
+  关闭全局定时器 --> ISP_TRIG寄存器存入0x46 
+  ISP_TRIG寄存器存入0x46 --> ISP_TRIG寄存器存入0xB9 
+  ISP_TRIG寄存器存入0xB9 --> 等待一个空闲周期 
+  等待一个空闲周期 --> 退出ISP模式
+
+```
+</center>
 
   - 关闭全局定时器是为了确保连续往ISP_TRIG寄存器存入0x46和0xB9，才能使命令生效
   - 推出ISP模式就是把寄存器ISP_CONTR、ISP_CMD、ISP_TRIG清空
-
-:::details 完整代码
 
 :::code-group
 <<< @/code/C/51/interFLASH.c{c}[内部FLASH读取设计]
