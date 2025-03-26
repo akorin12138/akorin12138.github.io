@@ -18,6 +18,8 @@
     "*.wxs": "javascript",
     "*.m": "matlab",
     "*.css": "postcss",
+    "reg51.h": "c",
+    "REG51.H": "cpp"
   },
   "svg.preview.background": "editor",
   "sarif-viewer.connectToGithubCodeScanning": "off"
