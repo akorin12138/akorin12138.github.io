@@ -25,8 +25,8 @@ wp=[wp1,wp2];
 
 bw=(ws2-ws1)*Fs;
 
-Ws=ws.*Fs;
-Wp=wp.*Fs;
+Ws=ws*Fs;
+Wp=wp*Fs;
 
 W0=sqrt(ws1*ws2)*Fs;
 
@@ -40,8 +40,16 @@ W0=sqrt(ws1*ws2)*Fs;
 [bz1,az1]=impinvar(B1,A1,Fs);   % 冲激响应不变法
 
 % 切比雪夫I型滤波器的双线性变换法
+% 双线性变换法需预畸变
+Ws=2*tan(ws/2)*Fs;
+Wp=2*tan(wp/2)*Fs;
 
-[bz2,az2]=bilinear(B1,A1,Fs);   % 双线性变换法
+[N2,Wn]=cheb1ord(Wp, Ws, Rp, Rs,'s');
+[z,p,k]=cheb1ap(N2, Rp);
+[num2,den2]=zp2tf(z, p, k);
+[B2,A2]=lp2bp(num2, den2, W0, bw);
+
+[bz2,az2]=bilinear(B2,A2,Fs);   % 双线性变换法
 
 % 画图
 figure;
