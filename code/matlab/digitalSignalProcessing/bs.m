@@ -34,9 +34,13 @@ title('fir带阻滤波器');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% iir巴特沃斯设计
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Wp=2*[tan(wp1/2),tan(wp2/2)]*Fs;
+Ws=2*[tan(ws1/2),tan(ws2/2)]*Fs;
+
 wo=sqrt(ws1*ws2)*Fs;
-bw=(wp2-wp1)*Fs;
-n=buttord([wp1,wp2]*Fs,[ws1,ws2]*Fs,1,rs,'s');
+bw=(ws2-ws1)*Fs;
+n=buttord(Wp,Ws,1,rs,'s');
 [z,p,k]=buttap(n);
 [b,a]=zp2tf(z,p,k);
 [b1,a1]=lp2bs(b,a,wo,bw);
@@ -52,8 +56,8 @@ title('iir巴特沃斯数字滤波器')
 %% iir切比雪夫设计
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 wo=sqrt(ws1*ws2)*Fs;
-bw=(wp2-wp1)*Fs;
-[n,rp]=cheb1ord([wp1,wp2]*Fs,[ws1,ws2]*Fs,1,rs,'s');
+bw=(ws2-ws1)*Fs;
+[n,rp]=cheb1ord(Wp,Ws,1,rs,'s');
 [z,p,k]=cheb1ap(n,1);
 [b,a]=zp2tf(z,p,k);
 [b1,a1]=lp2bs(b,a,wo,bw);
