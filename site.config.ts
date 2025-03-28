@@ -86,7 +86,7 @@ export default defineSiteConfig({
     // },
     {
       name: 'E-Mail',
-      link: 'mailto:niozi@outlook.com',
+      link: 'mailto:love@akorin.icu',
       icon: 'i-ri-mail-line',
       color: '#1DDBAF',
     },
