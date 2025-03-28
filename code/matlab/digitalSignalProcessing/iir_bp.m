@@ -15,20 +15,20 @@ clc;clear;close all;
 Fs=2000; % 采样频率
 Rp=1; % 通带最大衰减
 Rs=40; % 阻带最小衰减
-ws1=200/(Fs/2)*pi; % 通带截止归一化频率
-ws2=400/(Fs/2)*pi; % 通带截止归一化频率
-wp1=100/(Fs/2)*pi; % 阻带截止归一化频率
-wp2=500/(Fs/2)*pi; % 阻带截止归一化频率
+wp1=200/(Fs/2)*pi; % 通带截止归一化频率
+wp2=400/(Fs/2)*pi; % 通带截止归一化频率
+ws1=100/(Fs/2)*pi; % 阻带截止归一化频率
+ws2=500/(Fs/2)*pi; % 阻带截止归一化频率
 
 ws=[ws1,ws2];
 wp=[wp1,wp2];
 
-bw=(ws2-ws1)*Fs;
+bw=(wp2-wp1)*Fs;
 
 Ws=ws*Fs;
 Wp=wp*Fs;
 
-W0=sqrt(ws1*ws2)*Fs;
+W0=sqrt(wp1*wp2)*Fs;
 
 % 切比雪夫I型滤波器的冲激响应不变法
 
@@ -44,10 +44,13 @@ W0=sqrt(ws1*ws2)*Fs;
 Ws=2*tan(ws/2)*Fs;
 Wp=2*tan(wp/2)*Fs;
 
+Bw=2*tan(wp2/2)*Fs-2*tan(wp1/2)*Fs;
+Wo=sqrt(2*tan(wp2/2)*Fs*2*tan(wp1/2)*Fs);
+
 [N2,Wn]=cheb1ord(Wp, Ws, Rp, Rs,'s');
 [z,p,k]=cheb1ap(N2, Rp);
 [num2,den2]=zp2tf(z, p, k);
-[B2,A2]=lp2bp(num2, den2, W0, bw);
+[B2,A2]=lp2bp(num2, den2, Wo, Bw);
 
 [bz2,az2]=bilinear(B2,A2,Fs);   % 双线性变换法
 
@@ -69,4 +72,3 @@ ylabel('pi rad');
 figure;
 freqz(bz2,az2); % 双线性变换法
 title('双线性变换法');
-
