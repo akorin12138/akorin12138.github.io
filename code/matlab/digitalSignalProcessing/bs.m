@@ -38,8 +38,8 @@ title('fir带阻滤波器');
 Wp=2*[tan(wp1/2),tan(wp2/2)]*Fs;
 Ws=2*[tan(ws1/2),tan(ws2/2)]*Fs;
 
-wo=sqrt(wp1*wp2)*Fs;
-bw=(wp2-wp1)*Fs;
+wo=2*sqrt(tan(wp1/2)*tan(wp2/2))*Fs;
+bw=2*(tan(wp1/2)-tan(wp2/2))*Fs;
 n=buttord(Wp,Ws,1,rs,'s');
 [z,p,k]=buttap(n);
 [b,a]=zp2tf(z,p,k);
