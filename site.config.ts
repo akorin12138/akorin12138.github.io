@@ -3,7 +3,7 @@ import { defineSiteConfig } from 'valaxy'
 export default defineSiteConfig({
   url: 'https://akorin.icu',
   lang: 'zh-CN',
-  title: 'AkoRin的小站',
+  title: 'AkoRin\'s home',
   subtitle: '列车定会驶向下一站 那么舞台呢 我们呢',
 
   mediumZoom: { enable: true },
