@@ -143,13 +143,13 @@ export default defineValaxyConfig<ThemeUserConfig>({
       {
         text: "AkoRin",
         icon: 'i-line-md-heart-twotone-half',
-        link: "akorin.icu",
+        link: "https://akorin.icu",
         target: '_blank',
       },
       {
         text: '关于',
         icon: 'i-fa-leaf',
-        link: "akorin.icu",
+        link: "https://akorin.icu",
         target: '_blank',
       },
       {

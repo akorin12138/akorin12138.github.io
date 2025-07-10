@@ -2,3 +2,40 @@
 .wl-reaction {
     display: none !important;
 }
+
+:root {
+    --va-code-font-size: 1.25em;
+    --va-code-line-height: 1.8;
+    --va-custom-block-font-size: 18px;
+    --va-custom-block-code-font-size: 16px;
+}
+
+.prose ul>li::before {
+    display: none !important;
+}
+
+.prose table{
+    font-size: 1.05em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.prose {
+    font-size: 18px;
+}
+
+.markdown-body blockquote p {
+    font-size: 18px;
+}
+
+.prose blockquote p:last-of-type::after {
+    display: none !important;
+}
+
+.prose blockquote p:first-of-type::before {
+    display: none !important;
+}
+
+.custom-block {
+    padding: 0.5em 2em 1.5em;
+}
