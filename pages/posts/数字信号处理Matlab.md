@@ -7,7 +7,6 @@ tags:
   - 笔记
   - 数字信号处理
   - matlab
-top: 4
 cover: 'https://pic.akorin.icu/封面4.png'
 end: false
 ---

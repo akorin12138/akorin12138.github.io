@@ -8,7 +8,6 @@ tags:
   - 信号与系统
   - 速通
   - matlab
-top: 3
 codeHeightLimit: 350
 cover: 'https://pic.akorin.icu/封面3.png'
 end: true
