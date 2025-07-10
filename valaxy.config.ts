@@ -32,9 +32,9 @@ export default defineValaxyConfig<UserThemeConfig>({
     },
     bg_image: {
       enable: true,
-      url: 'https://pic.akorin.icu/bg-white.png',
-      dark: 'https://pic.akorin.icu/bg_black1.jpg',
-      opacity: 0.25,
+      url: 'https://pic.akorin.icu/bg-dark1.jpg',
+      dark: 'https://pic.akorin.icu/bg-white1.png',
+      opacity: 0.55,
     },
     pages: [
       // {

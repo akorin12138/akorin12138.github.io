@@ -1,19 +1,17 @@
 ---
-title: Zen Browser
+title: Zen Browser默认打开卡顿
 date: 2025-02-21
 updated: 2025-02-21
 categories: 浏览器
 tags:
   - Zen Browser
   - 优化
-cover: 'https://pub-3f9780acd0d54f9dabe63c0a1ab77225.r2.dev/呃呃呃呃.png'
+cover: 'https://pic.akorin.icu/67jja5nl.png'
 time_warning: true
 end: true
 ---
 
-## 问题
-
-Zen浏览器在全屏使用的时候总有卡顿，最后发现每次启动时，核显的占用率都会达到99%，而Chrome不会
+**Zen浏览器在全屏使用的时候总有卡顿，最后发现每次启动时，核显的占用率都会达到99%，而Chrome不会**
 
 ## 解决方案
 

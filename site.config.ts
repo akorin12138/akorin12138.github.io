@@ -11,7 +11,7 @@ export default defineSiteConfig({
   favicon: 'https://pic.akorin.icu/icon.png',
   author: {
     name: 'akorin',
-    avatar: 'https://pic.akorin.icu/20250311170937268.png',
+    avatar: 'https://pic.akorin.icu/touxiang.png',
     status: {
       emoji: '🌸',
     }

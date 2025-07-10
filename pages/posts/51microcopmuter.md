@@ -7,10 +7,10 @@ tags:
   - 笔记
   - 51单片机
   - C
-top: 5
 codeHeightLimit: 350
 cover: 'https://pic.akorin.icu/20250315185018179.png'
-end: false
+end: true
+time_warning: true
 ---
 
 51单片机主要使用的函数
