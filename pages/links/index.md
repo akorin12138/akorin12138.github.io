@@ -1,9 +1,11 @@
 ---
-title: 我的小伙伴们
+layout: links
+title: 友联板
 keywords: 链接
-description: 云游的小伙伴们
-links: https://www.yunyoujun.cn/friends/links.json
+links:
+  - rss: https://sakura.wrxinyue.org/atom.xml
+  - rss: https://sakura.valaxy.site/atom.xml
+  - rss: https://akorin.icu/atom.xml
 random: true
+comment: false
 ---
-
-<YunLinks :links="frontmatter.links" :random="frontmatter.random" />
