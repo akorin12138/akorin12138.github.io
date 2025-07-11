@@ -1,7 +1,7 @@
 {
   "name": "rika",
   "type": "module",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "npm run build:ssg",
@@ -13,12 +13,12 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "fuse": "^0.12.1",
     "mermaid": "^11.4.1",
-    "valaxy": "0.23.6",
-    "valaxy-addon-algolia": "^0.1.0",
+    "unhead": "1",
+    "valaxy": "0.22.13",
     "valaxy-addon-bangumi": "^0.2.2",
     "valaxy-addon-components": "^0.1.0",
-    "valaxy-addon-meting": "^0.1.4",
     "valaxy-addon-waline": "^0.2.0",
     "valaxy-theme-sakura": "^0.9.4",
     "valaxy-theme-yun": "0.23.6",

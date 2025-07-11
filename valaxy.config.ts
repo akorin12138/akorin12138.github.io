@@ -2,7 +2,6 @@ import type { ThemeUserConfig } from 'valaxy-theme-sakura'
 // import type { UserThemeConfig } from 'valaxy-theme-yun'
 import { defineValaxyConfig } from 'valaxy'
 import { addonWaline } from 'valaxy-addon-waline'
-import { addonMeting } from 'valaxy-addon-meting'
 import { addonBangumi } from 'valaxy-addon-bangumi'
 
 // add icons what you will need
@@ -17,6 +16,7 @@ export default defineValaxyConfig<ThemeUserConfig>({
   // site config see site.config.ts
 
   theme: 'sakura',
+  devtools: true,
 
   modules: {
       rss: {

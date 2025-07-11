@@ -110,7 +110,7 @@ export default defineSiteConfig({
        * @see https://www.fusejs.io/api/options.html#threshold
        * 设置匹配阈值，越低越精确
        */
-      // threshold: 0.6,
+      threshold: 0.6,
       /**
        * @default false
        * @see https://www.fusejs.io/api/options.html#ignoreLocation
@@ -129,6 +129,12 @@ export default defineSiteConfig({
   },
   statistics: {
     enable: true,
+    readTime: {
+      speed: {
+        cn: 300,
+        en: 200,
+      },
+    },
   },
   encrypt: {
     // 开启加密，默认关闭
@@ -137,4 +143,9 @@ export default defineSiteConfig({
     // iv
     // salt
   },
+  vanillaLazyload: {
+    enable: true,
+  },
+
+
 })
