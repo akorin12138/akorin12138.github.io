@@ -39,3 +39,8 @@
 .custom-block {
     padding: 0.5em 2em 1.5em;
 }
+
+.cursor-pointer ,
+[cursor-pointer=""]{
+    display: none !important;
+}
