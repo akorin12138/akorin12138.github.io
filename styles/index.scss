@@ -8,7 +8,9 @@
     --va-code-line-height: 1.8;
     --va-custom-block-font-size: 18px;
     --va-custom-block-code-font-size: 16px;
+    --va-primary-color-soft: var(--va-c-tip-soft);
 }
+// rgb(231, 227, 255)
 
 .prose ul>li::before {
     display: none !important;
@@ -80,3 +82,10 @@
     margin-top: 0.9em;
     margin-bottom: 0.9em;
 }
+
+.custom-block.tip {
+    border-color: var(--va-custom-block-tip-border);
+    color: var(--va-custom-block-tip-text);
+    background-color: var(--va-custom-block-tip-bg);
+}
+
