@@ -89,3 +89,8 @@
     background-color: var(--va-custom-block-tip-bg);
 }
 
+@media (max-width: 1023.9px) {
+    .lg\:hidden {
+        display: block;
+    }
+}
