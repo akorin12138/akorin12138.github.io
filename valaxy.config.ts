@@ -236,7 +236,7 @@ export default defineValaxyConfig<ThemeUserConfig>({
       },
     ],
     sidebarOptions: {
-      position: 'left',
+      position: 'right',
       enableOnDesktop: true,
       offset: false,
     },
