@@ -6,23 +6,32 @@
   "scripts": {
     "build": "npm run build:ssg",
     "build:spa": "valaxy build",
-    "build:ssg": "valaxy build --ssg",
-    "fuse": "valaxy fuse",
+    "build:ssg": "valaxy build --ssg --log=info",
     "dev": "valaxy",
+    "vite:dev": "npx vite-node -w scripts/vite-node.ts",
+    "valaxy:dev": "valaxy .",
+    "fuse": "valaxy fuse",
+    "preview-https": "serve dist",
+    "new": "valaxy new",
+    "new:f": "valaxy new -f",
     "rss": "valaxy rss",
     "serve": "vite preview"
   },
   "dependencies": {
+    "@urql/core": "^5.2.0",
+    "beasties": "~0.2.0",
     "fuse": "^0.12.1",
     "mermaid": "^11.4.1",
-    "unhead": "1",
-    "valaxy": "0.22.13",
+    "unhead": "^2.0.12",
+    "valaxy": "0.25.3",
     "valaxy-addon-bangumi": "^0.2.2",
     "valaxy-addon-components": "^0.1.0",
     "valaxy-addon-waline": "^0.2.0",
     "valaxy-theme-sakura": "^0.9.4",
     "valaxy-theme-yun": "0.23.6",
-    "vite-plugin-vue-layouts": "^0.11.0"
+    "vite": "5",
+    "vite-plugin-vue-layouts": "^0.11.0",
+    "vite-ssg": "^28.0.0"
   },
   "devDependencies": {
     "@iconify-json/fa": "^1.2.1",
