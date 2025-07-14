@@ -1,6 +1,6 @@
 [build]
 publish = "dist"
-command = "NODE_OPTIONS=--max_old_space_size=4096 npm run build"
+command = "pnpm build:spa"
 
 [build.environment]
 NODE_VERSION = "22.17.0"
