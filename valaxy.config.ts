@@ -166,8 +166,78 @@ export default defineValaxyConfig<ThemeUserConfig>({
       showMarker: false,
       autoHide: ['home'],
     },
+    sidebar: [
+      {
+        icon: 'i-fa-fort-awesome',
+        locale: 'menu.home',
+        link: '/',
+      },
+      {
+        icon: 'i-line-md-folder-twotone',
+        locale: 'menu.categories',
+        link: '/categories',
+      },
+      {
+        icon: 'i-fa-archive',
+        locale: 'menu.archives',
+        link: '/archives',
+      },
+      {
+        icon: 'i-fa-film',
+        text: '番剧',
+        // locale: 'menu.anime',
+        link: '/anime',
+      },
+      {
+        icon: 'i-fa-edit',
+        text: '留言板',
+        link: '/comment',
+      },
+      {
+        text: '友情链接',
+        icon: 'i-fa-chain',
+        link: '/links',
+        collapsed: false,
+        items: [
+          {
+            text: 'GitHub',
+            icon: 'i-line-md-github-twotone',
+            link: 'https://github.com/WRXinYue/valaxy-theme-sakura',
+          },
+          {
+            text: 'Discord',
+            icon: 'i-line-md-discord-twotone',
+            link: 'https://discord.gg/sGe4U4p4CK',
+          },
+          {
+            text: 'Valaxy →',
+            icon: 'i-ri-cloud-fill',
+            link: 'https://github.com/YunYouJun/valaxy',
+          },
+        ],
+      },
+      {
+        text: "AkoRin",
+        icon: 'i-line-md-heart-twotone-half',
+        link: "https://akorin.icu",
+        target: '_blank',
+      },
+      {
+        text: '关于',
+        icon: 'i-fa-leaf',
+        link: "https://akorin.icu",
+        target: '_blank',
+      },
+      {
+        text: 'RSS',
+        icon: 'i-fa-feed',
+        link: '/atom.xml',
+        target: '_blank',
+      },
+    ],
     sidebarOptions: {
       position: 'left',
+      enableOnDesktop: true
     },
     tags: {
       rainbow: true,
