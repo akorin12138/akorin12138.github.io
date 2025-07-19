@@ -3,6 +3,7 @@ import type { ThemeUserConfig } from 'valaxy-theme-sakura'
 import { defineValaxyConfig } from 'valaxy'
 import { addonWaline } from 'valaxy-addon-waline'
 import { addonBangumi } from 'valaxy-addon-bangumi'
+import { addonVercount } from 'valaxy-addon-vercount'
 
 // add icons what you will need
 const safelist = [
@@ -277,6 +278,9 @@ export default defineValaxyConfig<ThemeUserConfig>({
         bgmEnabled: true,
         bilibiliEnabled: false
       }),
+      addonVercount({
+      api: 'cn'
+    }),
     ],
   unocss: { safelist },
   vite: {

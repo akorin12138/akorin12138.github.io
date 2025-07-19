@@ -1,7 +1,7 @@
 ---
 title: C++学习记录
 date: 2025-07-10
-updated: 2025-07-18
+updated: 2025-07-19
 categories: 笔记
 tags:
   - 学习
@@ -9,6 +9,7 @@ tags:
   - C++
 cover: 'https://pic.akorin.icu/c++cover.jpg'
 codeHeightLimit: 550
+toc: true
 time_warning: false
 end: false
 ---
@@ -464,4 +465,33 @@ for(auto it = numbers.begin(); it != numbers.end(); ++it) {
     numbers.push_back(1);
 }
 ```
+
+#### 指针类似迭代器用法
+
+指针也是迭代器，在C++11中利用 `std::begin()` 可以获取数组第一个元素的指针， `std::end()` 获取数组'最后一个元素之后' 的指针，与迭代器的 `end()` 位置相同。
+```C++
+int ia[] = {0,1,2,3,4,5,6,7,8,9};
+int * beg = std::begin(ia);
+int * end = std::end(ia);
+for(auto it = beg; it != end; ++it){
+    std::cout << *it << " ";
+}
+```
+
+### C 风格字符串
+
+C风格字符串以空字符作为结束( `/0` )。在字符串的末尾一般会自动加上空字符( `/0` )。
+```C++
+char *str = "hello world!";
+```
+或
+```C++
+char str[] = "hello world!";
+```
+此时会在 `!` 后面自动加上 `/0` 。  
+但是须注意:
+```C++
+char str[] = {'a', 'b', 'c'};
+```
+虽然这里的 `str` 也是字符串数组，但是内部没有 `/0` ，这就会导致使用查询字符串长度函数 `strlen` 时，会一致沿着 `str` 在内存的位置直到找到 `/0` 才停下来，这也是C风格字符串的漏洞。
 
