@@ -1,0 +1,1 @@
+import"./chunks/pinia.4QrtjkbP.js";import{b as e}from"./chunks/vue-router.CKjci01t.js";import{$ as t,a3 as c,a2 as r}from"./framework.Dz9cD5qh.js";const o={};function n(a,f){return r(),c("div")}typeof e=="function"&&e(o);const m=t(o,[["render",n]]);export{m as default};

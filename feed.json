@@ -1,0 +1,110 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "AkoRin's home",
+    "home_page_url": "https://akorin.icu/",
+    "feed_url": "https://akorin.icu/feed.json",
+    "description": "随心记录",
+    "icon": "https://pic.akorin.icu/touxiang.png",
+    "author": {
+        "name": "akorin",
+        "url": "https://valaxy.site"
+    },
+    "items": [
+        {
+            "id": "https://akorin.icu/posts/gccSimpleLearn",
+            "content_html": "<h2>怎么这么难啊</h2>\n<p>在C语言的基础上继续学习CPP</p>\n<br/><p>访问 <a href=\"https://akorin.icu/posts/gccSimpleLearn\" target=\"_blank\">https://akorin.icu/posts/gccSimpleLearn</a> 阅读全文。</p>",
+            "url": "https://akorin.icu/posts/gccSimpleLearn",
+            "title": "C++学习记录",
+            "date_modified": "2025-07-10T00:00:00.000Z",
+            "date_published": "2025-07-19T00:00:00.000Z",
+            "author": {
+                "name": "akorin",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "https://akorin.icu/posts/数字信号处理Matlab",
+            "content_html": "<p>记录数字信号处理有关的Matlab代码</p>\n<br/><p>访问 <a href=\"https://akorin.icu/posts/数字信号处理Matlab\" target=\"_blank\">https://akorin.icu/posts/数字信号处理Matlab</a> 阅读全文。</p>",
+            "url": "https://akorin.icu/posts/数字信号处理Matlab",
+            "title": "数字信号处理Matlab编程",
+            "date_modified": "2025-03-03T00:00:00.000Z",
+            "date_published": "2025-03-27T00:00:00.000Z",
+            "author": {
+                "name": "akorin",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "https://akorin.icu/posts/51microcopmuter",
+            "content_html": "<p>51单片机主要使用的函数</p>\n<br/><p>访问 <a href=\"https://akorin.icu/posts/51microcopmuter\" target=\"_blank\">https://akorin.icu/posts/51microcopmuter</a> 阅读全文。</p>",
+            "url": "https://akorin.icu/posts/51microcopmuter",
+            "title": "51单片机编程",
+            "date_modified": "2025-03-15T00:00:00.000Z",
+            "date_published": "2025-03-26T00:00:00.000Z",
+            "author": {
+                "name": "akorin",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "https://akorin.icu/posts/信号Matlab",
+            "content_html": "<p>记录基于Matlab的有关信号的编程</p>\n<br/><p>访问 <a href=\"https://akorin.icu/posts/信号Matlab\" target=\"_blank\">https://akorin.icu/posts/信号Matlab</a> 阅读全文。</p>",
+            "url": "https://akorin.icu/posts/信号Matlab",
+            "title": "信号的Matlab编程",
+            "date_modified": "2025-02-25T00:00:00.000Z",
+            "date_published": "2025-03-08T00:00:00.000Z",
+            "author": {
+                "name": "akorin",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "https://akorin.icu/posts/通信原理",
+            "content_html": "<p>记录通信原理的一些知识，重点记录数字通信系统</p>\n<br/><p>访问 <a href=\"https://akorin.icu/posts/通信原理\" target=\"_blank\">https://akorin.icu/posts/通信原理</a> 阅读全文。</p>",
+            "url": "https://akorin.icu/posts/通信原理",
+            "title": "通信原理简记",
+            "date_modified": "2025-01-27T00:00:00.000Z",
+            "date_published": "2025-03-07T00:00:00.000Z",
+            "author": {
+                "name": "akorin",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "https://akorin.icu/posts/数字信号处理",
+            "content_html": "<p>主要记录数字信号处理Matlab代码及相关知识</p>\n<p>:::warning</p>\n<p>默认已学习完信号与系统</p>\n<p>:::</p>\n<br/><p>访问 <a href=\"https://akorin.icu/posts/数字信号处理\" target=\"_blank\">https://akorin.icu/posts/数字信号处理</a> 阅读全文。</p>",
+            "url": "https://akorin.icu/posts/数字信号处理",
+            "title": "数字信号处理简记",
+            "date_modified": "2025-02-19T00:00:00.000Z",
+            "date_published": "2025-02-28T00:00:00.000Z",
+            "author": {
+                "name": "akorin",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "https://akorin.icu/posts/zenbrowser",
+            "content_html": "<p><strong>Zen浏览器在全屏使用的时候总有卡顿，最后发现每次启动时，核显的占用率都会达到99%，而Chrome不会</strong></p>\n<h2>解决方案</h2>\n<ul>\n<li>等待Zen Browser的后续优化</li>\n<li>启动Zen Browser时使用高性能（独立显卡启动）：</li>\n</ul>\n<p><img src=\"https://pub-3f9780acd0d54f9dabe63c0a1ab77225.r2.dev/20250221164427234.png\" alt=\"\"></p>\n<br/><p>访问 <a href=\"https://akorin.icu/posts/zenbrowser\" target=\"_blank\">https://akorin.icu/posts/zenbrowser</a> 阅读全文。</p>",
+            "url": "https://akorin.icu/posts/zenbrowser",
+            "title": "Zen Browser默认打开卡顿",
+            "date_modified": "2025-02-21T00:00:00.000Z",
+            "date_published": "2025-02-21T00:00:00.000Z",
+            "author": {
+                "name": "akorin",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "https://akorin.icu/posts/JapanTravel",
+            "content_html": "<p>去霓虹准备的东西以及大致路线、要去圣地巡礼的地点。具体路线根据住宿的位置来决定</p>\n<br/><p>访问 <a href=\"https://akorin.icu/posts/JapanTravel\" target=\"_blank\">https://akorin.icu/posts/JapanTravel</a> 阅读全文。</p>",
+            "url": "https://akorin.icu/posts/JapanTravel",
+            "title": "Japan计划！",
+            "date_modified": "2025-01-29T00:00:00.000Z",
+            "date_published": "2025-01-30T00:00:00.000Z",
+            "author": {
+                "name": "akorin",
+                "url": "https://valaxy.site"
+            }
+        }
+    ]
+}
